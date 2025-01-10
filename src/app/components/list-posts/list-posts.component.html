@@ -1,0 +1,55 @@
+<h2>Liste des posts</h2>
+
+<a role="button" [routerLink]="['/posts/new']" class="btn btn-primary mb-3">Nouveau Post</a>
+
+<ul class="list-group">
+  <li
+    *ngFor="let post of postList"
+    class="list-group-item"
+    style="cursor: pointer;"
+  >
+    <!-- Informations sur le post -->
+    <div class="d-flex justify-content-between align-items-center">
+      <span>Post ID : {{ post.id }}</span>
+      
+      <!-- Boutons d'action -->
+      <div>
+        <!-- Bouton pour afficher les détails -->
+        <button class="btn btn-info btn-sm me-2" (click)="showDetails(post)">
+          <i class="bi bi-info-circle"></i> Afficher Détails
+        </button>
+
+        <!-- Bouton pour modifier -->
+        <button 
+          class="btn btn-warning btn-sm me-2" 
+          [routerLink]="['/posts', post.id, 'edit']"
+        >
+          <i class="bi bi-pencil-square"></i> Modifier
+        </button>
+
+        <!-- Bouton pour supprimer -->
+        <button 
+          class="btn btn-danger btn-sm"
+          (click)="deletePost(post.id)"
+        >
+          <i class="bi bi-trash"></i> Supprimer
+        </button>
+      </div>
+    </div>
+
+    <!-- Affiche les détails du post sélectionné -->
+    <ng-container *ngIf="selectedPost === post">
+      <div class="card mt-2 p-3 bg-light">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">
+            <strong>Body :</strong> {{ post.body }}
+          </p>
+          <p class="card-text">
+            <strong>User ID :</strong> {{ post.userId }}
+          </p>
+        </div>
+      </div>
+    </ng-container>
+  </li>
+</ul>
