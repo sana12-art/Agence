@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';
-import { ListPostsComponent } from './components/list-posts/list-posts.component';
-import { ListTodoComponent } from './components/list-todo/list-todo.component';
-import { HomepageComponent } from './components/homepage/homepage.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, ListPostsComponent, ListTodoComponent, HomepageComponent],
+  imports: [RouterOutlet, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'Agence';
-}
+export class AppComponent {}
