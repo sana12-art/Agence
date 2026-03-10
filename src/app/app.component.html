@@ -1,9 +1,14 @@
-<h1><a [routerLink]="['/']">{{title}}</a></h1>
-<nav>
+<header class="site-header">
+  <h1><a [routerLink]="['/']">{{ title }}</a></h1>
+  <nav>
     <ul>
-        <li><a [routerLink]="['/posts']">Liste posts</a></li>
-        <li><a [routerLink]="['/todos']">Liste todos</a></li>
+      <li><a [routerLink]="['/']">Portfolio</a></li>
+      <li><a [routerLink]="['/posts']">Posts</a></li>
+      <li><a [routerLink]="['/todos']">Todos</a></li>
     </ul>
-</nav>
+  </nav>
+</header>
 
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>

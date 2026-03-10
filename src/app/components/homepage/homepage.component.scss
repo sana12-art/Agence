@@ -1,0 +1,78 @@
+:host {
+  display: block;
+}
+
+.portfolio {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 0 1rem 2rem;
+  color: #1f2937;
+}
+
+.hero {
+  background: linear-gradient(135deg, #e0ecff 0%, #f5f9ff 55%, #ffffff 100%);
+  border: 1px solid #dbe7ff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.12);
+}
+
+.hero__badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+}
+
+.hero__subtitle {
+  margin: 0.7rem 0;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.hero__description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.card-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.15rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+
+.card p,
+.card li {
+  line-height: 1.5;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
